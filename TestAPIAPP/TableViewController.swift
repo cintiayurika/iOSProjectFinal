@@ -58,6 +58,7 @@ class TableViewController: UITableViewController {
         let data = try? Data(contentsOf: url!)
         cell.poster?.image  = UIImage(data: data!)
         cell.poster?.clipsToBounds = true
+        cell.showYear?.text = show.year
         return cell
     }
     
@@ -96,17 +97,9 @@ class TableViewController: UITableViewController {
                             //Implement JSON decoding and parsing
                             do {
                                 var omdbModelshow = try JSONDecoder().decode(OMDBShow.self, from: data)
-                                //                            image = omdbModel.poster
-                                
+     
                                 trendingShowsFromOMBDB.append(omdbModelshow)
-                                //print(trendingMoviesFromOMBDB)
-                                for trendingShow in trendingShowsFromOMBDB {
-                                    print("\((trendingShow.title))")
-                                    print("\((trendingShow.poster))")
-                                    print("\((trendingShow.runtime))")
-                                }
-                                //print (trendingMoviesFromOMBDB)
-                                //                        //Get back to the main queue
+
                                 DispatchQueue.main.async {
                                     
                                     self.tableView.reloadData()

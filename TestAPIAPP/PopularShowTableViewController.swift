@@ -2,7 +2,7 @@
 //  PopularShowTableViewController.swift
 //  TestAPIAPP
 //
-//  Created by Srinivasan Rao Sadanand on 4/22/18.
+//  Created by Simizu Yorinori Cintia Y. on 4/22/18.
 //  Copyright © 2018 Simizu Yorinori Cintia Y. All rights reserved.
 //
 
@@ -42,7 +42,7 @@ class PopularShowTableViewController: UITableViewController {
         let data = try? Data(contentsOf: url!)
         cell.poster?.image  = UIImage(data: data!)
         cell.poster?.clipsToBounds = true
-        
+        cell.showYear?.text = show.year
         
         return cell
     }
@@ -91,16 +91,8 @@ class PopularShowTableViewController: UITableViewController {
                             //Implement JSON decoding and parsing
                             do {
                                 var omdbModel = try JSONDecoder().decode(OMDBShow.self, from: data)
-                                //                            image = omdbModel.poster
                                 popularShowsFromOMBDB.append(omdbModel)
-                                //  print(trendingMoviesFromOMBDB)
-                                for popularShow in popularShowsFromOMBDB {
-                                    print("\((popularShow.title))")
-                                    print("\((popularShow.poster))")
-                                    print("\((popularShow.runtime))")
-                                }
-                                //print (trendingMoviesFromOMBDB)
-                                //                        //Get back to the main queue
+
                                 DispatchQueue.main.async {
                                     
                                     self.tableView.reloadData()

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TestAPIAPP
 //
-//  Created by Simizu Yorinori Cintia Y. on 4/21/18.
+//  Created by Srinivasan Rao Sadanand on 4/21/18.
 //  Copyright © 2018 Simizu Yorinori Cintia Y. All rights reserved.
 //
 
@@ -47,7 +47,7 @@ class ViewController: UITableViewController {
             let data = try? Data(contentsOf: url!)
             cell.poster?.image  = UIImage(data: data!)
             cell.poster?.clipsToBounds = true
-        
+            cell.movieYear?.text = movie.year
         
         return cell
     }
@@ -98,14 +98,7 @@ class ViewController: UITableViewController {
                                 var omdbModel = try JSONDecoder().decode(OMDBModel.self, from: data)
                                 //                            image = omdbModel.poster
                                 trendingMoviesFromOMBDB.append(omdbModel)
-                                //  print(trendingMoviesFromOMBDB)
-                                for trendingMovie in trendingMoviesFromOMBDB {
-                                    print("\((trendingMovie.title))")
-                                    print("\((trendingMovie.poster))")
-                                    print("\((trendingMovie.runtime))")
-                                }
-                                //print (trendingMoviesFromOMBDB)
-                                //                        //Get back to the main queue
+
                                 DispatchQueue.main.async {
                                     
                                     self.tableView.reloadData()

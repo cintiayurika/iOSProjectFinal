@@ -17,6 +17,7 @@ class TrendShowViewController: UIViewController {
     @IBOutlet weak var country: UILabel!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var language: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,13 +29,17 @@ class TrendShowViewController: UIViewController {
         let data = try? Data(contentsOf: url!)
         showImage.image = UIImage(data: data!)
         relDate.text = show.released
-        overview.text = show.plot
+        overview.text = show.totalSeasons
         runtime.text = show.runtime
         country.text = show.country
         for rate in show.ratings {
             rating.text = rate.value
         }
         genre.text = show.genre
+        
+        genre.contentMode = .scaleToFill
+        genre.numberOfLines = 0
+        language.text = show.language
     }
 
     override func didReceiveMemoryWarning() {

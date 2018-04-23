@@ -2,7 +2,7 @@
 //  PopShowTableViewCell.swift
 //  TestAPIAPP
 //
-//  Created by Srinivasan Rao Sadanand on 4/22/18.
+//  Created by Simizu Yorinori Cintia Y. on 4/22/18.
 //  Copyright © 2018 Simizu Yorinori Cintia Y. All rights reserved.
 //
 
@@ -12,6 +12,9 @@ class PopShowTableViewCell: UITableViewCell {
 
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var showTitle: UILabel!
+    @IBOutlet weak var showYear: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

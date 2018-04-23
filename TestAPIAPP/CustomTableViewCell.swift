@@ -2,7 +2,7 @@
 //  CustomTableViewCell.swift
 //  TestAPIAPP
 //
-//  Created by Simizu Yorinori Cintia Y. on 4/21/18.
+//  Created by Srinivasan Rao Sadanand on 4/21/18.
 //  Copyright © 2018 Simizu Yorinori Cintia Y. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieYear: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

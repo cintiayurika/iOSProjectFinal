@@ -2,7 +2,7 @@
 //  PopularMovieTableViewController.swift
 //  TestAPIAPP
 //
-//  Created by Srinivasan Rao Sadanand on 4/22/18.
+//  Created by Simizu Yorinori Cintia Y. on 4/22/18.
 //  Copyright © 2018 Simizu Yorinori Cintia Y. All rights reserved.
 //
 
@@ -42,7 +42,7 @@ class PopularMovieTableViewController: UITableViewController {
         let data = try? Data(contentsOf: url!)
         cell.poster?.image  = UIImage(data: data!)
         cell.poster?.clipsToBounds = true
-        
+        cell.movieYear?.text = movie.year
         
         return cell
     }
@@ -93,14 +93,7 @@ class PopularMovieTableViewController: UITableViewController {
                                 var omdbModel = try JSONDecoder().decode(OMDBModel.self, from: data)
                                 //                            image = omdbModel.poster
                                 popularMoviesFromOMBDB.append(omdbModel)
-                                //  print(trendingMoviesFromOMBDB)
-                                for popularMovie in popularMoviesFromOMBDB {
-                                    print("\((popularMovie.title))")
-                                    print("\((popularMovie.poster))")
-                                    print("\((popularMovie.runtime))")
-                                }
-                                //print (trendingMoviesFromOMBDB)
-                                //                        //Get back to the main queue
+
                                 DispatchQueue.main.async {
                                     
                                     self.tableView.reloadData()

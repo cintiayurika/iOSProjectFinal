@@ -11,6 +11,7 @@ import UIKit
 class TrendShowTableViewCell: UITableViewCell {
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var showTitle: UILabel!
+    @IBOutlet weak var showYear: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
