@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094CB5AD208CEA6200F04145 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5AC208CEA6200F04145 /* DetailViewController.swift */; };
+		094CB5AF208CEFAC00F04145 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5AE208CEFAC00F04145 /* MovieModel.swift */; };
+		094CB5B3208D0F9500F04145 /* OMDBShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5B2208D0F9500F04145 /* OMDBShow.swift */; };
+		094CB5B5208D348F00F04145 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5B4208D348F00F04145 /* TableViewController.swift */; };
+		094CB5B7208D36F400F04145 /* TrendShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5B6208D36F400F04145 /* TrendShowTableViewCell.swift */; };
+		094CB5B9208D3CD700F04145 /* TrendShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5B8208D3CD700F04145 /* TrendShowViewController.swift */; };
+		094CB5BB208D45A400F04145 /* PopularMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5BA208D45A400F04145 /* PopularMovieViewController.swift */; };
+		094CB5BD208D45B400F04145 /* PopularShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5BC208D45B400F04145 /* PopularShowViewController.swift */; };
+		094CB5BF208D45C700F04145 /* PopularMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5BE208D45C700F04145 /* PopularMovieTableViewController.swift */; };
+		094CB5C1208D45D700F04145 /* PopularShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5C0208D45D700F04145 /* PopularShowTableViewController.swift */; };
+		094CB5C3208D49CF00F04145 /* PopularMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5C2208D49CF00F04145 /* PopularMovieModel.swift */; };
+		094CB5C5208D4CCB00F04145 /* PopShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5C4208D4CCB00F04145 /* PopShowTableViewCell.swift */; };
+		094CB5C7208D4DB800F04145 /* PopMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB5C6208D4DB800F04145 /* PopMovieTableViewCell.swift */; };
+		C938E890208BB9600089CA8C /* OMDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938E88F208BB9600089CA8C /* OMDBModel.swift */; };
+		C938E892208BC0350089CA8C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938E891208BC0350089CA8C /* CustomTableViewCell.swift */; };
 		C9D71A2B208B90EA001C9B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D71A2A208B90EA001C9B51 /* AppDelegate.swift */; };
 		C9D71A2D208B90EA001C9B51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D71A2C208B90EA001C9B51 /* ViewController.swift */; };
 		C9D71A30208B90EA001C9B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D71A2E208B90EA001C9B51 /* Main.storyboard */; };
@@ -14,6 +29,7 @@
 		C9D71A35208B90EA001C9B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D71A33208B90EA001C9B51 /* LaunchScreen.storyboard */; };
 		C9D71A40208B90EA001C9B51 /* TestAPIAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D71A3F208B90EA001C9B51 /* TestAPIAPPTests.swift */; };
 		C9D71A4B208B90EA001C9B51 /* TestAPIAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D71A4A208B90EA001C9B51 /* TestAPIAPPUITests.swift */; };
+		C9D71A5B208B92BF001C9B51 /* TrendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D71A5A208B92BF001C9B51 /* TrendingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +50,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		094CB5AC208CEA6200F04145 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		094CB5AE208CEFAC00F04145 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		094CB5B2208D0F9500F04145 /* OMDBShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBShow.swift; sourceTree = "<group>"; };
+		094CB5B4208D348F00F04145 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		094CB5B6208D36F400F04145 /* TrendShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendShowTableViewCell.swift; sourceTree = "<group>"; };
+		094CB5B8208D3CD700F04145 /* TrendShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendShowViewController.swift; sourceTree = "<group>"; };
+		094CB5BA208D45A400F04145 /* PopularMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieViewController.swift; sourceTree = "<group>"; };
+		094CB5BC208D45B400F04145 /* PopularShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularShowViewController.swift; sourceTree = "<group>"; };
+		094CB5BE208D45C700F04145 /* PopularMovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieTableViewController.swift; sourceTree = "<group>"; };
+		094CB5C0208D45D700F04145 /* PopularShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularShowTableViewController.swift; sourceTree = "<group>"; };
+		094CB5C2208D49CF00F04145 /* PopularMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieModel.swift; sourceTree = "<group>"; };
+		094CB5C4208D4CCB00F04145 /* PopShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopShowTableViewCell.swift; sourceTree = "<group>"; };
+		094CB5C6208D4DB800F04145 /* PopMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMovieTableViewCell.swift; sourceTree = "<group>"; };
+		C938E88F208BB9600089CA8C /* OMDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBModel.swift; sourceTree = "<group>"; };
+		C938E891208BC0350089CA8C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C9D71A27208B90EA001C9B51 /* TestAPIAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPIAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D71A2A208B90EA001C9B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9D71A2C208B90EA001C9B51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +78,7 @@
 		C9D71A46208B90EA001C9B51 /* TestAPIAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAPIAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D71A4A208B90EA001C9B51 /* TestAPIAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIAPPUITests.swift; sourceTree = "<group>"; };
 		C9D71A4C208B90EA001C9B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D71A5A208B92BF001C9B51 /* TrendingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +132,25 @@
 				C9D71A2A208B90EA001C9B51 /* AppDelegate.swift */,
 				C9D71A2C208B90EA001C9B51 /* ViewController.swift */,
 				C9D71A2E208B90EA001C9B51 /* Main.storyboard */,
+				094CB5AC208CEA6200F04145 /* DetailViewController.swift */,
+				C938E891208BC0350089CA8C /* CustomTableViewCell.swift */,
 				C9D71A31208B90EA001C9B51 /* Assets.xcassets */,
 				C9D71A33208B90EA001C9B51 /* LaunchScreen.storyboard */,
 				C9D71A36208B90EA001C9B51 /* Info.plist */,
+				C9D71A5A208B92BF001C9B51 /* TrendingModel.swift */,
+				C938E88F208BB9600089CA8C /* OMDBModel.swift */,
+				094CB5AE208CEFAC00F04145 /* MovieModel.swift */,
+				094CB5B2208D0F9500F04145 /* OMDBShow.swift */,
+				094CB5B4208D348F00F04145 /* TableViewController.swift */,
+				094CB5B6208D36F400F04145 /* TrendShowTableViewCell.swift */,
+				094CB5B8208D3CD700F04145 /* TrendShowViewController.swift */,
+				094CB5BA208D45A400F04145 /* PopularMovieViewController.swift */,
+				094CB5BC208D45B400F04145 /* PopularShowViewController.swift */,
+				094CB5BE208D45C700F04145 /* PopularMovieTableViewController.swift */,
+				094CB5C0208D45D700F04145 /* PopularShowTableViewController.swift */,
+				094CB5C2208D49CF00F04145 /* PopularMovieModel.swift */,
+				094CB5C4208D4CCB00F04145 /* PopShowTableViewCell.swift */,
+				094CB5C6208D4DB800F04145 /* PopMovieTableViewCell.swift */,
 			);
 			path = TestAPIAPP;
 			sourceTree = "<group>";
@@ -259,8 +307,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094CB5AF208CEFAC00F04145 /* MovieModel.swift in Sources */,
 				C9D71A2D208B90EA001C9B51 /* ViewController.swift in Sources */,
+				094CB5C7208D4DB800F04145 /* PopMovieTableViewCell.swift in Sources */,
+				094CB5C1208D45D700F04145 /* PopularShowTableViewController.swift in Sources */,
+				C938E892208BC0350089CA8C /* CustomTableViewCell.swift in Sources */,
+				C938E890208BB9600089CA8C /* OMDBModel.swift in Sources */,
+				094CB5B3208D0F9500F04145 /* OMDBShow.swift in Sources */,
+				094CB5C3208D49CF00F04145 /* PopularMovieModel.swift in Sources */,
+				094CB5AD208CEA6200F04145 /* DetailViewController.swift in Sources */,
+				094CB5BB208D45A400F04145 /* PopularMovieViewController.swift in Sources */,
+				C9D71A5B208B92BF001C9B51 /* TrendingModel.swift in Sources */,
+				094CB5B5208D348F00F04145 /* TableViewController.swift in Sources */,
+				094CB5C5208D4CCB00F04145 /* PopShowTableViewCell.swift in Sources */,
+				094CB5B7208D36F400F04145 /* TrendShowTableViewCell.swift in Sources */,
 				C9D71A2B208B90EA001C9B51 /* AppDelegate.swift in Sources */,
+				094CB5B9208D3CD700F04145 /* TrendShowViewController.swift in Sources */,
+				094CB5BF208D45C700F04145 /* PopularMovieTableViewController.swift in Sources */,
+				094CB5BD208D45B400F04145 /* PopularShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

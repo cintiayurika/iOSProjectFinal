@@ -1,90 +1,72 @@
 //
-//  ViewController.swift
+//  DetailViewController.swift
 //  TestAPIAPP
 //
-//  Created by Simizu Yorinori Cintia Y. on 4/21/18.
+//  Created by Srinivasan Rao Sadanand on 4/22/18.
 //  Copyright © 2018 Simizu Yorinori Cintia Y. All rights reserved.
 //
 
 import UIKit
-var trendingMovies: [TrendingModel] = []
+var detailMovies: [MoviesModel] = []
+var detailMoviesFromOMBDB: [OMDBModel] = []
+class DetailViewController: UIViewController {
 
-var trendingMoviesFromOMBDB: [OMDBModel] = []
-
-
-
-class ViewController: UITableViewController {
-
-
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var moveImage: UIImageView!
+    @IBOutlet weak var relDate: UILabel!
+    @IBOutlet weak var overivew: UILabel!
+    @IBOutlet weak var runtime: UILabel!
+    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var genre: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTrendingMovies()
+        let movie = trendingMoviesFromOMBDB[myIndex]
         
+        movieTitle.text = movie.title
+        let url = URL(string: movie.poster)
+        let data = try? Data(contentsOf: url!)
+        moveImage.image = UIImage(data: data!)
+        relDate.text = movie.released
+        overivew.text = movie.plot
+        runtime.text = movie.runtime
+        country.text = movie.country
+        for rate in movie.ratings {
+            rating.text = rate.value
+        }
+        genre.text = movie.genre
         
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trendingMoviesFromOMBDB.count
-
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as! CustomTableViewCell
-        
-        
-            let movie = trendingMoviesFromOMBDB[indexPath.row]
-            cell.movieTitle?.text = movie.title
-            print("\(movie.poster)")
-            let url = URL(string: movie.poster)
-            let data = try? Data(contentsOf: url!)
-            cell.poster?.image  = UIImage(data: data!)
-            cell.poster?.clipsToBounds = true
-        
-        
-        return cell
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        
-    }
-    
-    func getTrendingMovies(){
-        let url = URL(string: "https://api.trakt.tv/movies/trending")!
+    /*
+    func getMovieDetail(){
+        let url = URL(string: "https://api.trakt.tv/movies/tron-legacy-2010")!
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("2", forHTTPHeaderField: "trakt-api-version")
         request.addValue("459266145b3b24793677649a8114c373e9d0a433a7967d0598cc677e34215523", forHTTPHeaderField: "trakt-api-key")
         
-       // var trendingMovies: [TrendingModel] = [TrendingModel]()
-     //   var image : String?
-        
+        // var trendingMovies: [TrendingModel] = [TrendingModel]()
+        //   var image : String?
+        print(request)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let response = response, let data = data {
                 
                 do {
                     //Decode retrived data with JSONDecoder and assing type of Article object
-                    trendingMovies = try JSONDecoder().decode([TrendingModel].self, from: data)
+                    detailMovies = try JSONDecoder().decode([MoviesModel].self, from: data)
                     //   print(tripsData)
                     
-                    for trendingMovie in trendingMovies {
-                        
+                    for detailMovie in detailMovies {
+                        print(detailMovie.title)
                         //print("\((store.movie?.ids.imdb)!)")
-                        let urlString = "http://www.omdbapi.com/?apikey=2f3cf8d0&i=" + (trendingMovie.movie?.ids.imdb)!
-                        print (urlString)
+                        let urlString = "http://www.omdbapi.com/?apikey=2f3cf8d0&i=" + (detailMovie.ids.imdb)!
+                        // print (urlString)
                         guard let url = URL(string: urlString) else { return }
                         
                         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -97,19 +79,19 @@ class ViewController: UITableViewController {
                             do {
                                 var omdbModel = try JSONDecoder().decode(OMDBModel.self, from: data)
                                 //                            image = omdbModel.poster
-                                trendingMoviesFromOMBDB.append(omdbModel)
+                                detailMoviesFromOMBDB.append(omdbModel)
                                 //  print(trendingMoviesFromOMBDB)
-                                for trendingMovie in trendingMoviesFromOMBDB {
-                                    print("\((trendingMovie.title))")
-                                    print("\((trendingMovie.poster))")
-                                    print("\((trendingMovie.runtime))")
+                                for detailMovie in detailMoviesFromOMBDB {
+                                    print("\((detailMovie.title))")
+                                    print("\((detailMovie.poster))")
+                                    print("\((detailMovie.runtime))")
                                 }
                                 //print (trendingMoviesFromOMBDB)
                                 //                        //Get back to the main queue
-                                DispatchQueue.main.async {
+                          /*      DispatchQueue.main.async {
                                     
                                     self.tableView.reloadData()
-                                }
+                                } */
                                 //
                             } catch let jsonError {
                                 print(jsonError)
@@ -133,10 +115,16 @@ class ViewController: UITableViewController {
         task.resume()
         
         
+    } */
 
-    } 
+    /*
+    // MARK: - Navigation
 
-    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
-
-
